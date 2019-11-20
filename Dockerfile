@@ -12,6 +12,7 @@ RUN apt-get update && \
 
 RUN echo "export JAVA_OPTS=\"-Dapp.env=staging\"" > /usr/local/tomcat/bin/setenv.sh
 COPY target/spring-mvc-showcase.war /usr/local/tomcat/webapps/spring-mvc-showcase.war
+# copy on windows \ that issue use / like on linux 
 
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
