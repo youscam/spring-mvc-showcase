@@ -33,6 +33,11 @@ From the command line with Maven:
     $ cd spring-mvc-showcase
     $ mvn jetty:run 
 
+On containers : 
+
+    $ mvn install -DskipTest
+    $ docker build -t springmvc-showcase .
+    $ docker run -p 8080:8080 -d springmvc-showcase
 Access the deployed web application at: http://localhost:8080/spring-mvc-showcase/
 
 Note:
